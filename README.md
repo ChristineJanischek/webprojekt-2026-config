@@ -63,6 +63,7 @@ Data Layer (MySQL - Persistent Storage)
 | [ARCHITEKTUR.md](docs/handbuch/ARCHITEKTUR.md) | Technische Architektur & Diagramme |
 | [Handbuch Index](docs/handbuch/INDEX.md) | Übersicht aller Dokumentationen |
 | [README.md](docs/handbuch/README.md) | Quick-Start & Übersicht |
+| [Web-Live-Test (Fahrenheit-Reiseseite)](docs/handbuch/anleitungen/web-live-test.md) | Schritt-fuer-Schritt Browser-Test fuer `webapp/public/fahrenheit_reiseseite` |
 | [legacy-analysis/README.md](legacy-analysis/README.md) | 🔒 **Legacy-Code Analyse** (Upload & Analyse) |
 
 ---
@@ -103,9 +104,14 @@ bash scripts/start-services.sh
 ```
 
 ### 4. Services im Browser öffnen
-- **Web Frontend:** http://localhost:8000
-- **Python API:** http://localhost:5000
+- **Web Frontend (PHP):** http://localhost:8080
+- **Python API:** http://localhost:8000
 - **MySQL:** localhost:3306
+
+### 5. Live-Test der Fahrenheit-Reiseseite
+- **Anleitung:** [docs/handbuch/anleitungen/web-live-test.md](docs/handbuch/anleitungen/web-live-test.md)
+- **Zielseite:** http://localhost:8080/fahrenheit_reiseseite/
+- **Routine fuer taegliche Wiederholung:** [docs/handbuch/routinen/kurzfristig/KF-ROUTINE-007-web-live-test-fahrenheit.md](docs/handbuch/routinen/kurzfristig/KF-ROUTINE-007-web-live-test-fahrenheit.md)
 
 ---
 

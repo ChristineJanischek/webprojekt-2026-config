@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* Datei: responsivegrid.css*/
+/* Styling für das Logo-Einbettung*/
+/******
+Logo formatieren
+****/
+/******
+Logo im CSS formatieren
+****/
+#logo{	
+        float: left; /*Ausrichtung der Box: links*/
+    	width: 300px;/*Box-Breite: 155 Punkte*/
+    	height: 255px; /*Box-Höhe: 195 Punkte*/
+        margin-left: 5px;/*Außenabstand: 5 Punkte*/
+        background:url(../images/sonne.png) no-repeat;/*logo einbinden */
+}
+

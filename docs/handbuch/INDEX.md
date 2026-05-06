@@ -8,6 +8,8 @@
 
 ### 🚀 Schnelleinstieg
 - **[README.md](README.md)** - Start hier! Quick-Start & Übersicht (5 Min)
+- **[anleitungen/web-live-test.md](anleitungen/web-live-test.md)** - Browser-Live-Test fuer PHP/Python/MySQL
+- **One-Command im Projektroot:** `bash scripts/live-test-web.sh`
 
 ### 📖 Kernliteratur (Lesen in dieser Reihenfolge!)
 1. **[PFLICHTENHEFT.md](PFLICHTENHEFT.md)** - Anforderungen, Ziele, Umfang
@@ -16,6 +18,7 @@
 
 ### 🧪 Anleitungen & Live-Tests
 - **[anleitungen/java-live-test.md](anleitungen/java-live-test.md)** - Java-App kompilieren, Modell-Tests & GUI starten
+- **[anleitungen/web-live-test.md](anleitungen/web-live-test.md)** - Webprojekt live testen (PHP + Python + MySQL) inkl. Fahrenheit-Reiseseite
 
 ### 🔧 Prozesse & Governance
 - **[prozesse/neue-routine-erstellen.md](prozesse/neue-routine-erstellen.md)** - Schritt-für-Schritt Anleitung
@@ -32,6 +35,9 @@
 - **[routinen/kurzfristig/](routinen/kurzfristig/)** - Täglich/Wöchentlich (Kurzzeitaufgaben)
 - **[routinen/mittelfristig/](routinen/mittelfristig/)** - Monatlich/Quartalsweise (Mittelfristig)
 - **[routinen/langfristig/](routinen/langfristig/)** - Jährlich/Strategisch (Langfristig)
+
+### ✅ Empfohlene Routine fuer Web-Live-Tests
+- **[routinen/kurzfristig/KF-ROUTINE-007-web-live-test-fahrenheit.md](routinen/kurzfristig/KF-ROUTINE-007-web-live-test-fahrenheit.md)** - Wiederholbarer Tagesablauf fuer Browser-Live-Tests
 
 ---
 

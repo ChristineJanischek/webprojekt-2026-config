@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* Datei: galerie.css*/
+/* Styling für das Galerie-Einbettung */
+/* Responsive Minigalerie */
+
+img{
+	border: 2px solid orange;
+	padding: 10px;
+	border-radius: 50px 20px;
+}
+
+.minigalerie {
+	/* Flexbox-Layout aktivieren */
+	display: grid; 
+
+    /*fr für "Fraction": zweispaltig mit 2 Anteile - 1 Anteil*/	
+	grid-template-columns: 1fr;
+	
+	/* Platz zwischen den Spalten aufteilen */
+	justify-content: space-between; 
+	
+	/* Abstand zwischen den Bildern */
+    gap: 5px;                    
+  
+}
+
+.minigalerie a {
+	/*Display: Blockelement*/
+    display: block; 	
+}
+
+.minigalerie .element {
+	/* Transition/Verzögerung für weiche Übergänge */
+    transition: 1s;       
+    
+    /*Transition (Eigenschaftswechsel) für den Firefox: 1 Sekunde*/       
+    -moz-transition: 1s;
+    
+    /*Transition (Eigenschaftswechsel) für den Opera: 1 Sekunde*/
+	-o-transition: 1s;
+	
+	/*Transition (Eigenschaftswechsel) für Safari und Chrome: 1 Sekunde*/
+	-webkit-transistion: 1s;
+	
+	/*Hindergrundfarbergb */
+	background-color: #333;
+    
+    /*Innenabstand*/
+    padding: 10px;
+    
+    /* Rahmen */   
+    border: 3px solid orange;
+ 
+    /* Rahmen-Radius: Abgerundete Ecken */
+  	border-radius: 10px;       
+    
+    /*Rahmen-Radius für abgerudete Ecken für Firefox*/  
+    -moz-border-radius: 10px;  
+    
+    /*Rahmen-Radius für abgerudete Ecken für Safari und Chrome*/
+	-webkit-border-radius: 10px;  
+	
+	/* Bilder passen sich der Elternbreite an */
+    max-width: 90%;      
+    
+    /* Behalte das Seitenverhältnis bei */      
+    height: auto;    
+                
+}
+
+.minigalerie img, .minigalerie .element{
+		/* Schattierung */
+    box-shadow: 2px 2px 7px rgba(100, 100, 100, 0.5); 
+    
+    /* Schattierung Firefox*/
+    -moz-box-shadow: 2 2 7px rbga(100,100,100,0.5);
+    
+    /* Schattierung Safari/Chrome*/
+	-webkit-box-shadow: 2 2 7px rbga(100,100,100,0.5);
+}
+
+.minigalerie img:target {
+	/* Erhöhe die Breite des Ziels (Foto vergrößern)*/
+    width: 90%;  
+    
+    /* Erhöhe die Höhe des Ziels (Foto vergrößern)*/              
+    height: auto;
+}
+
+/* Responsive Design Anpassungen Media Queries*/
+@media (max-width: 768px) {
+	.minigalerie{
+		grid-template-columns: 1fr; /* Nur eine Spalte */
+	}
+    .minigalerie img {
+    	/* Für mobile Geräte, Bilder auf 100% der Breite skalieren */
+        width: 100%;   
+        
+        /* Für mobile Geräte, Bilder Höhe automatisch regulieren */     
+        height: auto;
+    }
+}

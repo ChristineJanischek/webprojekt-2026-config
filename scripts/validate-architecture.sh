@@ -10,17 +10,21 @@ note_fail() {
 
 echo "[arch] Starte Architekturvalidierung..."
 
-# Java-Basis-Check
-./scripts/test-java.sh
+if [[ -d src/volleyball ]] && compgen -G "src/volleyball/*.java" >/dev/null; then
+  # Java-Basis-Check
+  ./scripts/test-java.sh
 
-# OOP-Guardrails: Keine mutierenden Setter fuer interne Teamlisten
-if grep -nE "setStartaufstellung\(|setErsatzBank\(" src/volleyball/VolleyballspielerTeamManager.java >/dev/null 2>&1; then
-  note_fail "Model kapselt interne Listen nicht sauber (mutierende Setter gefunden)."
-fi
+  # OOP-Guardrails: Keine mutierenden Setter fuer interne Teamlisten
+  if grep -nE "setStartaufstellung\(|setErsatzBank\(" src/volleyball/VolleyballspielerTeamManager.java >/dev/null 2>&1; then
+    note_fail "Model kapselt interne Listen nicht sauber (mutierende Setter gefunden)."
+  fi
 
-# Null-Sentinel im Model vermeiden
-if grep -nE "default:[[:space:]]*return[[:space:]]+null;" src/volleyball/VolleyballspielerTeamManager.java >/dev/null 2>&1; then
-  note_fail "Model liefert null als Kontrollflusswert (bitte leere Sammlung/Exception nutzen)."
+  # Null-Sentinel im Model vermeiden
+  if grep -nE "default:[[:space:]]*return[[:space:]]+null;" src/volleyball/VolleyballspielerTeamManager.java >/dev/null 2>&1; then
+    note_fail "Model liefert null als Kontrollflusswert (bitte leere Sammlung/Exception nutzen)."
+  fi
+else
+  echo "[arch] Kein Java-Modul unter src/volleyball gefunden - Java-Architekturchecks werden uebersprungen"
 fi
 
 if [[ $fail -ne 0 ]]; then
